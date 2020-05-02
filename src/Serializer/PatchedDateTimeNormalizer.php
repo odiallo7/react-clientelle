@@ -51,19 +51,19 @@ class PatchedDateTimeNormalizer implements NormalizerInterface, DenormalizerInte
      */
     public function normalize($object, string $format = null, array $context = [])
     {
-        if (!$object instanceof \DateTimeInterface) {
-            throw new InvalidArgumentException('The object must implement the "\DateTimeInterface".');
-        }
+        // if (!$object instanceof \DateTimeInterface) {
+        //     throw new InvalidArgumentException('The object must implement the "\DateTimeInterface".');
+        // }
 
-        $dateTimeFormat = $context[self::FORMAT_KEY] ?? $this->defaultContext[self::FORMAT_KEY];
-        $timezone = $this->getTimezone($context);
+        // $dateTimeFormat = $context[self::FORMAT_KEY] ?? $this->defaultContext[self::FORMAT_KEY];
+        // $timezone = $this->getTimezone($context);
 
-        if (null !== $timezone) {
-            $object = clone $object;
-            $object = $object->setTimezone($timezone);
-        }
+        // if (null !== $timezone) {
+        //     $object = clone $object;
+        //     $object = $object->setTimezone($timezone);
+        // }
 
-        return $object->format($dateTimeFormat);
+        // return $object->format($dateTimeFormat);
     }
 
     /**
