@@ -31,7 +31,9 @@ class AppFixtures extends Fixture
 
         for($u = 0; $u < 10; $u++ ){
             $user = new User();
+
             $chrono = 1;
+            
             $hash = $this->encoder->encodePassword($user, "password");
             $user->setFirstName($faker->firstName())
                  ->setLastName($faker->lastName)
