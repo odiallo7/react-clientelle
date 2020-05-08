@@ -25,7 +25,7 @@ const InvoicesPage = (props) => {
       const data = await InvoicesAPI.findAll();
       setInvoices(data);
     } catch (error) {
-      conslo.log(error.response);
+      console.log(error.response);
     }
   };
 
