@@ -3,6 +3,7 @@ import axios from "axios";
 import AuthAPI from "../services/AuthAPI";
 import AuthContext from "../contexts/AuthContext";
 import Field from "../components/forms/Field";
+import { toast } from "react-toastify";
 
 const LoginPage = ({ history }) => {
   const { setIsAuthenticated } = useContext(AuthContext);
@@ -28,9 +29,11 @@ const LoginPage = ({ history }) => {
       await AuthAPI.authenticate(credentials);
       setError("");
       setIsAuthenticated(true);
+      toast.success("Bienvenu dans votre espace ✅");
       history.replace("/customers");
     } catch (error) {
       setError("Le nom d'utilisateur ou le compte n'existe pas !");
+      toast.error("Une erreur est survenue ⛔");
     }
   };
 
