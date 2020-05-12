@@ -9,7 +9,7 @@ const Pagination = ({ currentPage, itemsPerPage, length, onPageChanged }) => {
 
   return (
     <div>
-      <ul className="pagination pagination-sm">
+      <ul className="pagination pagination-sm justify-content-center">
         <li className={"page-item" + (currentPage === 1 && " disabled")}>
           <button
             className="page-link"
