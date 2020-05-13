@@ -17,7 +17,7 @@ const Navbar = ({ history }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand" to="/">
-        SymReact !
+        ReactClientelle !
       </NavLink>
       <button
         className="navbar-toggler"
